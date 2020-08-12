@@ -1,0 +1,6 @@
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\bin\Debug\SuperControls.dll
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\bin\Debug\SuperControls.pdb
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Debug\SuperControls.csprojAssemblyReference.cache
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Debug\SuperControls.dll
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Debug\SuperControls.pdb
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Debug\SuperControls.csproj.CoreCompileInputs.cache

@@ -1,0 +1,7 @@
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\bin\Release\SuperControls.dll
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\bin\Release\SuperControls.pdb
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Release\SuperControls.dll
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Release\SuperControls.pdb
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Release\SuperControls.csprojAssemblyReference.cache
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\obj\Release\SuperControls.csproj.CoreCompileInputs.cache
+E:\معاذ\مشاريع برمجة\SuperControls\SuperControls\bin\Release\SuperControls.xml

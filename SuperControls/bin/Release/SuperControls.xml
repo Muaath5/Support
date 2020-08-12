@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SuperControls</name>
+    </assembly>
+    <members>
+        <member name="T:SuperControls.AnimateWindowFlags">
+            <summary>
+            Some animation types, it's Flags
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Activate">
+            <summary>
+             Activates the window. Do not use this value with AW_HIDE. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Blend">
+            <summary>
+            AW_BLEND, Uses a fade effect. This flag can be used only if hwnd is a top-level window. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Center">
+            <summary>
+            Makes the window appear to collapse inward if AW_HIDE is used or expand outward if the AW_HIDE is not used. The various direction flags have no effect. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Hide">
+            <summary>
+            Hides the window. By default, the window is shown. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Left">
+            <summary>
+            AW_HOR_POSITIVE, Animates the window from left to right. This flag can be used with roll or slide animation. It is ignored when used with AW_CENTER or AW_BLEND. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Right">
+            <summary>
+            AW_HOR_NEGATIVE, Animates the window from right to left. This flag can be used with roll or slide animation. It is ignored when used with AW_CENTER or AW_BLEND. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Slide">
+            <summary>
+            Uses slide animation. By default, roll animation is used. This flag is ignored when used with AW_CENTER. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Bottom">
+            <summary>
+            AW_VER_POSITIVE, Animates the window from top to bottom. This flag can be used with roll or slide animation. It is ignored when used with AW_CENTER or AW_BLEND. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Top">
+            <summary>
+            AW_VER_NEGATIVE, Animates the window from bottom to top. This flag can be used with roll or slide animation. It is ignored when used with AW_CENTER or AW_BLEND. 
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Expand">
+            <summary>
+            Activate | Center, To Expand window from center
+            </summary>
+        </member>
+        <member name="F:SuperControls.AnimateWindowFlags.Contract">
+            <summary>
+            Hide | Center, To Contract window to center
+            </summary>
+        </member>
+        <member name="T:SuperControls.IControl">
+            <summary>
+            Non-Official, Everything in Control as an <see cref="!:interface"/>
+            </summary>
+        </member>
+        <member name="T:SuperControls.NativeMethods">
+            <summary>
+            Some Win32 methods
+            </summary>
+        </member>
+        <member name="M:SuperControls.NativeMethods.GetRoundedRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create Rounded rectangle <see cref="T:System.Drawing.Region"/>
+            </summary>
+            <param name="nLeftRect">Rectangle.Left</param>
+            <param name="nTopRect">Rectangle.Top</param>
+            <param name="nRightRect">Rectangle.Right</param>
+            <param name="nBottomRect">Rectangle.Bottom</param>
+            <param name="nWidthEllipse">Ellipse horizintal radius</param>
+            <param name="nHeightEllipse">Ellipse vertical radius</param>
+            <returns></returns>
+        </member>
+        <member name="M:SuperControls.NativeMethods.RoundRect(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draw Round rectangle
+            </summary>
+            <param name="hdc">HDC</param>
+            <param name="left">Rectangle.Left</param>
+            <param name="top">Rectangle.Top</param>
+            <param name="right">Rectangle.Right</param>
+            <param name="bottom">Rectangle.Bottom</param>
+            <param name="width">Ellipse horizintal radius</param>
+            <param name="height">Ellipse vertical radius</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:SuperControls.NativeMethods.DeleteObject(System.IntPtr)">
+            <summary>
+            Delete GDI object
+            </summary>
+            <param name="hObject">object</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:SuperControls.NativeMethods.AnimateWindow(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            Animate Window
+            </summary>
+            <param name="hWnd">Window's handle</param>
+            <param name="time">Time </param>
+            <param name="flags"><see cref="T:SuperControls.AnimateWindowFlags"/></param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:SuperControls.NativeMethods.GetRoundRegion(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Get Round region
+            </summary>
+            <param name="rect">Rectangle</param>
+            <param name="radius"></param>
+            <returns><see cref="T:System.Drawing.Region"/></returns>
+        </member>
+        <member name="M:SuperControls.NativeMethods.DrawRoundRect(System.IntPtr,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hdc"></param>
+            <param name="rect"></param>
+            <param name="radius"></param>
+            <exception cref="T:System.ComponentModel.Win32Exception">GDI Exception, 'RoundRect' method</exception>
+        </member>
+        <member name="T:SuperControls.SuperButton">
+            <summary>
+            SuperButton, Inherits from <see cref="T:System.Windows.Forms.Button"/>, <see cref="T:SuperControls.ISuperControl"/>
+            </summary>
+        </member>
+        <member name="M:SuperControls.SuperButton.#ctor">
+            <summary>
+            Super Button
+            </summary>
+        </member>
+        <member name="M:SuperControls.SuperButton.OnEnabledChanged(System.EventArgs)">
+            <summary>
+            Call enabeld changed event
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/></param>
+        </member>
+        <member name="M:SuperControls.SuperButton.Animate(System.Int32,SuperControls.AnimateWindowFlags)">
+            <summary>
+            Animate Control with some styles
+            </summary>
+            <param name="time">Time from animation start to end</param>
+            <param name="flags">Animation style and type</param>
+            <returns>Returns <see cref="!:false"/> when error</returns>
+        </member>
+        <member name="M:SuperControls.SuperButton.OnSizeChanged(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:SuperControls.SuperDataGridView.Animate(System.Int32,SuperControls.AnimateWindowFlags)">
+            <summary>
+            Animate Control with some styles
+            </summary>
+            <param name="time">Time from animation start to end</param>
+            <param name="flags">Animation style and type</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:SuperControls.SuperForm.Animate(System.Int32,SuperControls.AnimateWindowFlags)">
+            <summary>
+            Animate Control with some styles
+            </summary>
+            <param name="time">Time from animation start to end</param>
+            <param name="flags">Animation style and type</param>
+            <returns>Returns <see cref="!:false"/> when error</returns>
+        </member>
+        <member name="T:SuperControls.SuperPanel">
+            <summary>
+            Inherited from <see cref="T:System.Windows.Forms.Panel"/>, Impelements <see cref="T:SuperControls.ISuperControl"/>
+            </summary>
+        </member>
+        <member name="M:SuperControls.SuperPanel.Animate(System.Int32,SuperControls.AnimateWindowFlags)">
+            <summary>
+            Animate Control with some styles
+            </summary>
+            <param name="time">Time from animation start to end</param>
+            <param name="flags">Animation style and type</param>
+            <returns>Returns <see cref="!:false"/> when error</returns>
+        </member>
+        <member name="M:SuperControls.SuperPanel.OnSizeChanged(System.EventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="T:SuperControls.SuperRichTextBox">
+            <summary>
+            Inherited from <see cref="T:System.Windows.Forms.RichTextBox"/>, Impelements <see cref="T:SuperControls.ISuperTextBox"/>
+            </summary>
+        </member>
+        <member name="P:SuperControls.SuperRichTextBox.BorderRadius">
+            <summary>
+            Border ellipse radius, if no round conners let it 0
+            </summary>
+        </member>
+        <member name="P:SuperControls.SuperRichTextBox.CurrentLine">
+            <summary>
+            Current Line
+            </summary>
+        </member>
+        <member name="M:SuperControls.SuperRichTextBox.Highlight(System.Drawing.Color,System.Drawing.Color,System.String)">
+            <summary>
+            Highlight any word with forecolor, backcolor
+            </summary>
+            <param name="foreColor">Highlighted word Text color</param>
+            <param name="backColor">Highlighted word Back color</param>
+            <param name="word">Highlighted Word</param>
+        </member>
+        <member name="M:SuperControls.SuperRichTextBox.DehighlightAll">
+            <summary>
+            Dehighlight all
+            </summary>
+        </member>
+        <member name="M:SuperControls.SuperRichTextBox.OnSizeChanged(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e">Event Arguments</param>
+        </member>
+        <member name="M:SuperControls.SuperTextBox.Animate(System.Int32,SuperControls.AnimateWindowFlags)">
+            <summary>
+            Animate Control with some styles
+            </summary>
+            <param name="time">Time from animation start to end</param>
+            <param name="flags">Animation style and type</param>
+            <returns>Returns <see cref="!:false"/> when error</returns>
+        </member>
+    </members>
+</doc>
